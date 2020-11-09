@@ -33,4 +33,7 @@ void printHugeInt (const HugeInt* hugeInt) {
 }
 
 void printHugeFloat (const HugeFloat* hugeFloat) {
+    char* hugeFloatString = HugeFloatToString (hugeFloat);
+    printf ("%s\n", hugeFloatString);
+    free (hugeFloatString);
 }
