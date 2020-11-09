@@ -21,7 +21,7 @@ HugeUnsignedInt* createHugeUnsignedIntFromHugeUnsignedInt (const HugeUnsignedInt
     return hugeUnsignedIntCopy;
 }
 
-void deleteHugeUnsignedInt (const HugeUnsignedInt* hugeUnsignedInt) {
+void deleteHugeUnsignedInt (HugeUnsignedInt* hugeUnsignedInt) {
     deleteDoublyLinkedList (hugeUnsignedInt);
 }
 
@@ -29,7 +29,7 @@ int getHugeUnsignedIntLength (const HugeUnsignedInt* hugeUnsignedInt) {
     return getDoublyLinkedListLength (hugeUnsignedInt);
 }
 
-HugeUnsignedInt* simplifyHugeUnsignedInt (const HugeUnsignedInt* hugeUnsignedInt) {
+HugeUnsignedInt* simplifyHugeUnsignedInt (HugeUnsignedInt* hugeUnsignedInt) {
     if (hugeUnsignedInt != NULL) {
         char simplify = 1;
         while ((!isNodeEmpty (hugeUnsignedInt->start)) && simplify) {
